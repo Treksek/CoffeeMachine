@@ -61,6 +61,7 @@ namespace Kohvimasin
 			Console.WriteLine("* V - Piimaga kohv - 1.50");
 			Console.WriteLine("* L - Latte - 1.80");
 			Console.WriteLine("* C - Cappuccino - 1.80");
+			Console.WriteLine("* O - Mochaccino - 2.20");
 			Console.WriteLine("* K - Kakao - 1.60");
 			Console.WriteLine("* T - Tee - 0.50");
 			Console.WriteLine("* P - Puljong - 0.80");
@@ -102,6 +103,12 @@ namespace Kohvimasin
 						Console.WriteLine("Valitud cappuccino");
 						costOfDrink = 180;
 						drinkCode = 4;
+						selectionOK = true;
+						break;
+					case 'O':
+						Console.WriteLine("Valitud mochaccino");
+						costOfDrink = 220;
+						drinkCode = 8;
 						selectionOK = true;
 						break;
 					case 'K':
@@ -213,7 +220,7 @@ namespace Kohvimasin
 			Console.WriteLine("Joogi valmistamine");	
 			
 			
-			if (drinkCode == 5)
+			if (drinkCode == 5 || drinkCode == 8)
 			{
 				Console.BackgroundColor = ConsoleColor.DarkYellow;
 				Console.ForegroundColor = ConsoleColor.Black;
@@ -237,14 +244,14 @@ namespace Kohvimasin
 				Console.ResetColor();
 
 			}
-			if (drinkCode == 5 || drinkCode == 2 || drinkCode == 3 || drinkCode == 4)
+			if (drinkCode == 5 || drinkCode == 2 || drinkCode == 3 || drinkCode == 4 || drinkCode == 8)
 			{
 				Console.BackgroundColor = ConsoleColor.White;
 				Console.ForegroundColor = ConsoleColor.Black;
 				Console.WriteLine("Piim                ");
 				Console.ResetColor();
 			}
-			if (drinkCode == 5 || drinkCode == 3 || drinkCode == 4)
+			if (drinkCode == 5 || drinkCode == 3 || drinkCode == 4 || drinkCode == 8)
 			{
 				Console.BackgroundColor = ConsoleColor.White;
 				Console.ForegroundColor = ConsoleColor.Black;
@@ -272,14 +279,14 @@ namespace Kohvimasin
 				Console.WriteLine("Kohv                ");
 				Console.ResetColor();
 			}
-			if (drinkCode == 1 || drinkCode == 2 || drinkCode == 4)
+			if (drinkCode == 1 || drinkCode == 2 || drinkCode == 4 || drinkCode == 8)
 			{
 				Console.BackgroundColor = ConsoleColor.DarkRed;
 				Console.ForegroundColor = ConsoleColor.Black;
 				Console.WriteLine("Kohv                ");
 				Console.ResetColor();
 			}
-			if (drinkCode == 1 || drinkCode == 2 || drinkCode == 3 || drinkCode == 4)
+			if (drinkCode == 1 || drinkCode == 2 || drinkCode == 3 || drinkCode == 4 || drinkCode == 8)
 			{
 				Console.BackgroundColor = ConsoleColor.Blue;
 				Console.ForegroundColor = ConsoleColor.Black;
