@@ -22,19 +22,23 @@ namespace Kohvimasin
             {         
 
 				coffeeMachine.DisplayDrinkSelections();
-
+				Console.WriteLine();
 				while (!coffeeMachine.CheckTotal())
 				{
 					Console.WriteLine("Palun sisesta münt (10, 20, 50, 1, 2)");
 					coffeeMachine.DepositCoin(Convert.ToInt32(Console.ReadLine()));
 				}
-
+				Console.WriteLine();
 				coffeeMachine.ReturnChange();
+				Console.WriteLine();
 				coffeeMachine.AddCup();
+				Console.WriteLine();
 				coffeeMachine.AddSugar();
+				Console.WriteLine();
 				coffeeMachine.MakeDrink();
-				
+				Console.WriteLine();
 				Console.WriteLine("Jook valmis! Palun võta tops!");
+				Console.WriteLine();
 				Console.WriteLine("Kas soovid lahkuda? Soovi korral vajuta j. Jätkamiseks vajuta enter.");
 				key = Console.ReadLine();
 				if (key.Equals("J") | key.Equals("j"))
@@ -146,9 +150,11 @@ namespace Kohvimasin
 			{
 				Console.WriteLine("Mitu suhkrut soovid?");
 				MakeSugarSelection(Convert.ToChar(Console.ReadLine()));
+				Console.WriteLine();
 			}
 			else
             {
+				Console.WriteLine();
 				Console.WriteLine("Segamispulk lisatud");
 			}
 
@@ -165,16 +171,19 @@ namespace Kohvimasin
 						break;
 					case '1':
 						Console.WriteLine("Lisatud 1 suhkur");
+						Console.WriteLine();
 						Console.WriteLine("Segamispulk lisatud");
 						selectionOK = true;
 						break;
 					case '2':
 						Console.WriteLine("Lisatud 2 suhkrut");
+						Console.WriteLine();
 						Console.WriteLine("Segamispulk lisatud");
 						selectionOK = true;
 						break;
 					case '3':
 						Console.WriteLine("Lisatud 3 suhkrut");
+						Console.WriteLine();
 						Console.WriteLine("Segamispulk lisatud");
 						selectionOK = true;
 						break;
